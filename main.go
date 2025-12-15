@@ -2,10 +2,12 @@ package main
 
 import (
 	"time"
+
+	"github.com/bootdotdev/pokedexcli/internal/pokeapi"
 )
 
 func main() {
-	pokeClient := NewClient(20 * time.Second)
+	pokeClient := pokeapi.NewClient(5 * time.Second)
 	cfg := &config{
 		pokeapiClient: pokeClient,
 	}

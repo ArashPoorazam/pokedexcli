@@ -5,10 +5,12 @@ import (
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/bootdotdev/pokedexcli/internal/pokeapi"
 )
 
 type config struct {
-	pokeapiClient    Client
+	pokeapiClient    pokeapi.Client
 	nextLocationsURL *string
 	prevLocationsURL *string
 }

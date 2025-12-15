@@ -1,4 +1,4 @@
-package main
+package pokeapi
 
 // RespShallowLocations -
 type RespShallowLocations struct {
