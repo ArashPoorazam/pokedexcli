@@ -6,7 +6,7 @@ import "github.com/ArashPoorazam/pokedexcli/internal/pokeapi"
 type cliCommand struct {
 	name        string
 	description string
-	callback    func(*config) error
+	callback    func(*config, ...string) error
 }
 
 // Config -
@@ -14,4 +14,5 @@ type config struct {
 	pokeapiClient    pokeapi.Client
 	nextLocationsURL *string
 	prevLocationsURL *string
+	caughtPokemon    map[string]pokeapi.Pokemon
 }
